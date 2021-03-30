@@ -7,9 +7,6 @@ public class Camion extends MedioDeTransporte{
         super(modelo, color, capacidad, potencia, ejes, anyo, id);
     }
 
-
-
-
     public void resitrarNuevaEntrega(){
         System.out.println("Proceso de nueva entrega registrado para el camión: " + getId());
     }

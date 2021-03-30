@@ -1,5 +1,6 @@
 package transports;
 
+@SuppressWarnings("unused")
 public class Bicicleta extends MedioDeTransporte{
 
     public Bicicleta(String modelo, String color, String capacidad, int potencia, int ejes, int anyo, int id) {
