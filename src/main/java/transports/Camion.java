@@ -1,63 +1,39 @@
 package transports;
 
 
-public class Camion {
-
-    private String modelo, color, capacidad;
-    private int potencia, ejes, anyo, id;
+public class Camion extends MedioDeTransporte{
 
     public Camion(String modelo, String color, String capacidad, int potencia, int ejes, int anyo, int id) {
-        this.modelo = modelo;
-        this.color = color;
-        this.capacidad = capacidad;
-        this.potencia = potencia;
-        this.ejes = ejes;
-        this.anyo = anyo;
-        this.id = id;
+        super(modelo, color, capacidad, potencia, ejes, anyo, id);
     }
 
-    public String getModelo() {
-        return modelo;
-    }
 
-    public String getColor() {
-        return color;
-    }
 
-    public String getCapacidad() {
-        return capacidad;
-    }
-
-    public int getPotencia() {
-        return potencia;
-    }
-
-    public int getEjes() {
-        return ejes;
-    }
-
-    public int getAnyo() {
-        return anyo;
-    }
-
-    public int getId() {
-        return id;
-    }
 
     public void resitrarNuevaEntrega(){
-        System.out.println("Proceso de nueva entrega registrado para el camión: " + id);
+        System.out.println("Proceso de nueva entrega registrado para el camión: " + getId());
     }
 
     public void darDeBaja(){
-        System.out.println("Camión con id "+ id + " dado de baja");
+        System.out.println("Camión con id "+ getId() + " dado de baja");
     }
 
     public void darDeAlta(){
-        System.out.println("Camión con id "+ id + " dado de alta");
+        System.out.println("Camión con id "+ getId() + " dado de alta");
     }
 
     public void entregarPedido(){
         System.out.println("Camión entregando Pedido");
+    }
+
+    @Override
+    public void darMantenimiento() {
+        System.out.println("Dando mantenimiento");
+    }
+
+    @Override
+    public void registrarNuevaEntrega() {
+        System.out.println("Registrando nueva entrega");
     }
 
     public void cargarGasolina(){
